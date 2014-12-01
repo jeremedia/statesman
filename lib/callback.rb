@@ -1,4 +1,4 @@
-require_relative "exceptions"
+require "exceptions"
 
 module Statesman
   class Callback

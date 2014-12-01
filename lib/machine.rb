@@ -1,9 +1,9 @@
-require_relative "version"
-require_relative "exceptions"
-require_relative "guard"
-require_relative "callback"
-require_relative "event_transitions"
-require_relative "adapters/memory_transition"
+require "version"
+require "exceptions"
+require "guard"
+require "callback"
+require "event_transitions"
+require "memory_transition"
 
 module Statesman
   # The main module, that should be `extend`ed in to state machine classes.
@@ -39,7 +39,7 @@ module Statesman
       def state(name, options = { initial: false })
         name = name.to_s
         if options[:initial]
-          validate_initial_state(name)
+          #validate_initial_state(name)
           @initial_state = name
         end
         states << name
